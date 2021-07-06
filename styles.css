@@ -1,0 +1,71 @@
+root: {
+  --white: #fafafa;
+  /* font-size: 2.5%; */
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 67.6rem;
+  margin: 0 16% 0 16%;
+}
+
+.container--column {
+  display: flex;
+  flex-direction: column;
+}
+
+.container--row {
+  display: flex;
+  flex-direction: row;
+}
+
+h1 {
+  font-family: "Poppins", sans-serif;
+  font-size: 36px;
+}
+
+.main-panel {
+  margin: 0 16%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 26.4rem;
+  height: 38.3rem;
+}
+
+.card--top {
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 26.4rem;
+}
+
+.member-photo {
+  width: 238px;
+  height: 347px;
+}
+
+.side-text {
+  height: 1.6rem;
+  transform: translate(-4rem, 3.6rem) rotate(90deg);
+  text-transform: uppercase;
+  font-family: "PT Serif", serif;
+  font-size: 1rem;
+}
