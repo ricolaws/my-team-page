@@ -35,7 +35,6 @@ h1 {
   font-family: "PT Serif", serif;
   font-style: normal;
   font-weight: 700;
-
   font-size: 3rem;
   line-height: 48px;
   letter-spacing: -0.045rem;
@@ -45,7 +44,6 @@ h3 {
   font-family: "Poppins", sans-serif;
   font-size: 1.4rem;
   font-weight: 600;
-  /* margin-top: 1rem; */
   text-transform: uppercase;
 }
 
@@ -62,25 +60,25 @@ p {
   font-weight: normal;
   font-size: 1.3rem;
   line-height: 2.2rem;
-  max-width: 32rem;
-  margin-top: 1rem;
 }
 
 .footer span {
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
+  letter-spacing: 0.05rem;
+  color: #a9a9a9;
 }
 
 a {
   font-weight: 700;
   font-style: bold;
-  text-decoration: inherit;
+  text-decoration: underline;
   color: inherit;
   transition: color 0.8s;
 }
 
 a:hover {
-  color: darkgreen;
+  color: green;
 }
 
 /* *********************
@@ -112,13 +110,16 @@ a:hover {
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-start;
-  /* width: 67.6rem; */
   margin: 4% 16% 2% 16%;
 }
 
 .header__right {
   margin: 0.5rem 4rem 0 4rem;
-  /* margin-right: 12rem; */
+}
+
+.header__right p {
+  max-width: 32rem;
+  margin-top: 1rem;
 }
 
 .title {
@@ -135,8 +136,8 @@ a:hover {
   height: 88%;
 }
 
-/* the second column is set lower on the page. */
-.second-column {
+/* the second column set lower on the page. */
+.desktop-low-column {
   display: flex;
   justify-content: flex-end;
 }
@@ -145,13 +146,11 @@ a:hover {
   display: flex;
   flex-direction: column;
   width: 22rem;
-  /* height: 32rem; */
   margin: 0 0 5rem 0;
 }
 
 .member-photo {
   width: 16rem;
-  /* height: 30rem; */
 }
 
 /* rotated text along upper right side of photo */
@@ -169,15 +168,108 @@ a:hover {
 
 .footer {
   justify-content: center;
-
   bottom: 0;
   width: 120rem;
-  text-align: center;
-
   font-size: 1.1rem;
-  font-style: normal;
-  font-weight: 400;
-  color: #a9a9a9;
   padding: 0 4rem 1rem 0;
-  letter-spacing: 0.05rem;
+}
+
+/* *********************
+        media queries
+    ********************* */
+
+/* smaller screen (tablets) */
+
+@media screen and (max-width: 1024px) {
+  :root {
+    font-size: 48%;
+  }
+
+  body {
+    height: 100%;
+  }
+
+  .header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 4% 16% 2% 16%;
+  }
+
+  .main-panel {
+    margin: 1% 16% 0 16%;
+    padding: 4rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: 88%;
+  }
+
+  .side-text {
+    text-transform: uppercase;
+    font-family: "PT Serif", serif;
+    font-size: 1rem;
+    height: 1.4rem;
+    width: 34.7rem;
+    flex-shrink: 0;
+    transform: rotate(90deg) translate(48%, 16rem);
+  }
+}
+
+/* phone screen */
+
+@media screen and (max-width: 540px) {
+  :root {
+    font-size: 62.5%;
+  }
+
+  body {
+    width: 100vh;
+  }
+
+  .page {
+    max-width: 540px;
+  }
+
+  .header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 4% 16% 2% 16%;
+  }
+
+  .main-panel {
+    margin: 1% 16% 0 16%;
+    padding: 4rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: 88%;
+  }
+
+  #bill {
+    order: 1;
+  }
+
+  #skylah {
+    order: 2;
+  }
+
+  #saba {
+    order: 1;
+  }
+
+  #griff {
+    order: 3;
+  }
+
+  #shae {
+    order: 2;
+  }
+
+  #stan {
+    order: 3;
+  }
 }
