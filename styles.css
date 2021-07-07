@@ -1,6 +1,10 @@
-root: {
-  --white: #fafafa;
-  /* font-size: 2.5%; */
+/* *********************
+        global styles
+    ********************* */
+
+:root {
+  font-size: 62.5%;
+  --main-bg-color: #fafafa;
 }
 
 *,
@@ -10,17 +14,85 @@ root: {
 }
 
 body {
-  font-family: "Poppins", sans-serif;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  background-color: var(--main-bg-color);
+}
+
+/* *********************
+        typography
+    ********************* */
+
+h1,
+h3,
+h4,
+p {
   margin: 0;
 }
 
-.header {
+h1 {
+  font-family: "PT Serif", serif;
+  font-style: normal;
+  font-weight: 700;
+
+  font-size: 3rem;
+  line-height: 48px;
+  letter-spacing: -0.045rem;
+}
+
+h3 {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+  /* margin-top: 1rem; */
+  text-transform: uppercase;
+}
+
+h4 {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 2.7rem;
+}
+
+p {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.3rem;
+  line-height: 2.2rem;
+  max-width: 32rem;
+  margin-top: 1rem;
+}
+
+.footer span {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+}
+
+a {
+  font-weight: 700;
+  font-style: bold;
+  text-decoration: inherit;
+  color: inherit;
+  transition: color 0.8s;
+}
+
+a:hover {
+  color: darkgreen;
+}
+
+/* *********************
+        layout
+    ********************* */
+
+.page {
+  width: 120rem;
+  height: 100vh;
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  width: 67.6rem;
-  margin: 0 16% 0 16%;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .container--column {
@@ -33,39 +105,79 @@ body {
   flex-direction: row;
 }
 
-h1 {
-  font-family: "Poppins", sans-serif;
-  font-size: 36px;
+/* top of page */
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  /* width: 67.6rem; */
+  margin: 4% 16% 2% 16%;
 }
 
+.header__right {
+  margin: 0.5rem 4rem 0 4rem;
+  /* margin-right: 12rem; */
+}
+
+.title {
+  width: 50%;
+}
+
+/* middle of page */
+
 .main-panel {
-  margin: 0 16%;
+  margin: 1% 16% 0 16%;
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
+  height: 88%;
+}
+
+/* the second column is set lower on the page. */
+.second-column {
+  display: flex;
+  justify-content: flex-end;
 }
 
 .card {
   display: flex;
   flex-direction: column;
-  width: 26.4rem;
-  height: 38.3rem;
-}
-
-.card--top {
-  align-items: flex-start;
-  justify-content: flex-start;
-  width: 26.4rem;
+  width: 22rem;
+  /* height: 32rem; */
+  margin: 0 0 5rem 0;
 }
 
 .member-photo {
-  width: 238px;
-  height: 347px;
+  width: 16rem;
+  /* height: 30rem; */
 }
 
+/* rotated text along upper right side of photo */
 .side-text {
-  height: 1.6rem;
-  transform: translate(-4rem, 3.6rem) rotate(90deg);
   text-transform: uppercase;
   font-family: "PT Serif", serif;
   font-size: 1rem;
+  height: 1.4rem;
+  width: 347px;
+  flex-shrink: 0;
+  transform: rotate(90deg) translate(48%, 16rem);
+}
+
+/* bottom of page */
+
+.footer {
+  justify-content: center;
+
+  bottom: 0;
+  width: 120rem;
+  text-align: center;
+
+  font-size: 1.1rem;
+  font-style: normal;
+  font-weight: 400;
+  color: #a9a9a9;
+  padding: 0 4rem 1rem 0;
+  letter-spacing: 0.05rem;
 }
